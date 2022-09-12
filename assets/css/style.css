@@ -169,7 +169,6 @@ body {
 }
 
 /* ************************  my story content */
-
 .story-item {
     /* position: relative; */
     /* margin: 0.55rem 0.55rem 0.55rem 0.55rem; */
@@ -270,32 +269,30 @@ body {
 }
 /* using a mobile-first approach, use `min-width` values */
 /* going from narrow -> wide for a responsive design */
-/* @media screen and (min-width: 76.8rem) { */
+@media screen and (min-width: 76.8rem) {
     /* on tablets, set columns to only be 50% of the width and not grow */
-    /* .headshot { */
-      /* flex: 0 0 50%; */
-      /* max-width: 50%; */
-    /* } */
-
-    /* .main-content { */
-      /* flex: 0 0 50%; */
-      /* max-width: 50%; */
-    /* } */
+    .headshot,
+    .story-content,
+    .skills-content,
+    .contact-content {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
   
     /* select the last child to grow to full width if it has space to grow */
-    /* .main-content:last-child { */
-      /* flex-grow: 1; */
-    /* } */
-/* } */
+    .skills-content:last-child {
+      flex-grow: 1;
+    }
+}
   
 /* media query for larger screens */
-/* @media screen and (min-width: 99.2rem) { */
-    /* .landing-page { */
-      /* width: 75%; */
-    /* } */
+@media screen and (min-width: 99.2rem) {
+    .landing-page {
+      width: 75%;
+    }
   
-    /* .card-content { */
-      /* flex: 0 0 33.333%; */
-      /* max-width: 33.333%; */
-    /* } */
-/* } */
+    .skills-card {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+}
